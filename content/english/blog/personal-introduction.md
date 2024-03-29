@@ -23,4 +23,4 @@ I am Ritika Hotwani, a final-year student pursuing Computer Science with a minor
 ## The Plan:
 My initial foray will revolve around an illuminating series delving into the concepts of the JAVA language, a cornerstone in my triumphs during placement.Furthermore, I'll continue to share personal insights on matters such as navigating the selection of your tech stack and sustaining academic excellence with a 9 GPA, among other compelling topics.
 
-Stay tuned!
+Stay tuned!😄
