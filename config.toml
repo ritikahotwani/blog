@@ -1,5 +1,5 @@
 baseURL = "https://blog.ritikahotwani.com/"
-title = "Ritika's Blog"
+title = ""
 
 theme = "puppet"
 # themesDir = "../.."
@@ -70,12 +70,11 @@ weight = 50
 
 [params]
 author = "Ritika Howani"
-description = "Coding  |  Productivity  |  Life"
 keywords = "blog,developer,personal"
-img_home = "img/home-bg.jpg"
+img_home = "img/home-bg.png"
 # img_home = "images/home/thanos-pal-cFbNlpRZKi0-unsplash.jpg"
 img_404 = "img/404-bg.jpg"
-images = ['img/home-bg.jpg']
+images = ['img/home-bg.png']
 
 useFaviconGenerator = true
 
@@ -89,7 +88,7 @@ gravatarEmail = ""
 avatar = "img/memoji.jpeg"
 bio = """
 
-Hey there, I’m Chaitanya, a software developer based in Mumbai.
+Hey there, I’m Ritika, a software developer based in Mumbai.
 
 This is where I showcase my innovative projects and share my journey of crafting solutions that make a difference.
 
@@ -99,14 +98,14 @@ Welcome to my blog!
 
 [params.social]
 rss_enable = true
-twitter = "ChaiitanyaS"
-instagram = "chaitanya_shahare_"
+twitter = "ritiii24"
+instagram = "riti2.4"
 # facebook = "johndoe"
 # zhihu = "johndoe"
 # weibo = "johndoe"
-github = "Chaitanya-Shahare"
+github = "ritikahotwani"
 linkedin = "cs03/"
-mail = "shaharechaitanya3@gmail.com"
+mail = "ritikahotwani24@gmail.com"
 
 # [[params.friends]]
 # name = "John Doe"
@@ -118,7 +117,7 @@ mail = "shaharechaitanya3@gmail.com"
 
 # See https://giscus.app/
 [params.giscus]
-enable = true
+enable = false
 repo = "Chaitanya-Shahare/blog-site-comments"
 repo_id = "R_kgDOIa6SGg"
 # category = "General"
