@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Library Management System on Ritika&#39;s Blog</title>
+    <link>http://localhost:1313/tags/library-management-system/</link>
+    <description>Recent content in Library Management System on Ritika&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>2024 | Ritika Hotwani</copyright>
+    <lastBuildDate>Sat, 30 Mar 2024 20:59:22 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/library-management-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> How to create a Library Management System in Java using OOPs</title>
+      <link>http://localhost:1313/posts/library-management-system/</link>
+      <pubDate>Sat, 30 Mar 2024 20:59:22 +0530</pubDate>
+      <guid>http://localhost:1313/posts/library-management-system/</guid>
+      <description>IntroductionThis blog showcases a simplistic approach to library management system implementation using Object Oriented Programming (OOP). We will be creating a library management system with the following features :&#xA;Add new book Borrow a book Return a book Display all the books Display available books The soruce code of the project :&#xA;Prerequisites Java JDK installed. VScode ( or any other IDE of your choice). ImplementationStart by creating a file named library.</description>
+    </item>
+  </channel>
+</rss>

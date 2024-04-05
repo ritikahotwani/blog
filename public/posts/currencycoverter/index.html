@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+    
+  <title>Currency converter | Ritika&#39;s Blog</title>
+  <meta name="author" content="Ritika Howani">
+  <meta name="description" content="Currency coverter is one of the classic projects to start with. It deals with the conversion between INR and Dollar. With no further due lets begin!
+We will be using JFrame to build this project The javax.swing.JFrame class is a type of container which inherits the java.awt.Frame class.
+JFrame works like the main window where components like labels, buttons, textfields are added to create a GUI.
+Create a file named currencyconverter.">
+  <meta name="keywords" content="blog,developer,personal">
+
+  <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="http://localhost:1313/default_opengraph.png" /><meta name="twitter:title" content="Currency converter"/>
+<meta name="twitter:description" content="Currency coverter is one of the classic projects to start with. It deals with the conversion between INR and Dollar. With no further due lets begin!
+We will be using JFrame to build this project The javax.swing.JFrame class is a type of container which inherits the java.awt.Frame class.
+JFrame works like the main window where components like labels, buttons, textfields are added to create a GUI.
+Create a file named currencyconverter."/>
+      <meta name="twitter:site" content="@ritiii24"/>
+
+  <meta property="og:title" content="Currency converter" />
+<meta property="og:description" content="Currency coverter is one of the classic projects to start with. It deals with the conversion between INR and Dollar. With no further due lets begin!
+We will be using JFrame to build this project The javax.swing.JFrame class is a type of container which inherits the java.awt.Frame class.
+JFrame works like the main window where components like labels, buttons, textfields are added to create a GUI.
+Create a file named currencyconverter." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/posts/currencycoverter/" /><meta property="og:image" content="http://localhost:1313/default_opengraph.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-29T19:55:29+05:30" />
+<meta property="article:modified_time" content="2024-03-29T19:55:29+05:30" />
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css"  crossorigin="anonymous">
+  
+  <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="/sass/main.css">
+
+  <link rel="stylesheet" href="/zoomjs/zoom.min.css">
+
+  <script src=/js/lazysizes.min.js></script>
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  
+
+</head>
+
+
+
+<body ontouchstart="">
+  
+  
+  <nav class="navbar navbar-default navbar-custom navbar-fixed-top ">
+  <div class="container-fluid">
+    
+    <div class="navbar-header page-scroll">
+      <button type="button" class="navbar-toggle">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">Ritika&#39;s Blog</a>
+    </div>
+    
+    <div id="huxblog_navbar">
+      <div class="navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          
+          <li><a href="/" title="Home">Home</a></li>
+          
+          <li><a href="/archive/" title="Archive">Archive</a></li>
+          
+          <li><a href="/about/" title="About">About</a></li>
+          
+
+          <li class="search-icon">
+            <a href="javascript:void(0)">
+              <i class="fa fa-search"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+  </div>
+  
+</nav>
+<script>
+  
+  
+  
+  var $body = document.body;
+  var $toggle = document.querySelector(".navbar-toggle");
+  var $navbar = document.querySelector("#huxblog_navbar");
+  var $collapse = document.querySelector(".navbar-collapse");
+
+  var __HuxNav__ = {
+    close: function () {
+      $navbar.className = " ";
+      
+      setTimeout(function () {
+        
+        if ($navbar.className.indexOf("in") < 0) {
+          $collapse.style.height = "0px";
+        }
+      }, 400);
+    },
+    open: function () {
+      $collapse.style.height = "auto";
+      $navbar.className += " in";
+    },
+  };
+
+  
+  $toggle.addEventListener("click", function (e) {
+    if ($navbar.className.indexOf("in") > 0) {
+      __HuxNav__.close();
+    } else {
+      __HuxNav__.open();
+    }
+  });
+
+  
+
+  document.addEventListener("click", function (e) {
+    if (e.target == $toggle) return;
+    if (e.target.className == "icon-bar") return;
+    __HuxNav__.close();
+  });
+</script>
+  
+<div class="search-page">
+  <div class="search-icon-close-container">
+    <span class="search-icon-close">
+      <i class="fa fa-chevron-down"></i>
+    </span>
+  </div>
+  <div class="search-main container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <form></form>
+        <input type="text" id="search-input" placeholder="$ grep...">
+        </form>
+        <div id="search-results" class="mini-post-list"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+
+
+<style type="text/css">
+  header.intro-header {
+    position: relative;
+    background-image: url('/black-background.jpg');
+  }
+</style>
+
+<header class="intro-header ">
+
+  <div class="header-mask"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <div class="tags">
+            
+          </div>
+          <h1>Currency converter</h1>
+          <h2 class="subheading"></h2>
+          <span class="meta">
+            Posted by  Ritika Howani 
+            on Fri, Mar 29, 2024
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+  
+
+
+<article>
+  <div class="container">
+    <div class="row">
+
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              post-container">
+        <p>Currency coverter is one of the classic projects to start with. It deals with the conversion between INR and Dollar.
+With no further due lets begin!</p>
+<p>We will be using JFrame to build this project
+The javax.swing.JFrame class is a type of container which inherits the java.awt.Frame class.</p>
+<p>JFrame works like the main window where components like <em>labels, buttons, textfields</em> are added to create a GUI.</p>
+<ol>
+<li>
+<p>Create a file named <code>currencyconverter.java</code></p>
+</li>
+<li>
+<p>Import libraries
+<code>import javax.swing.*;  import java.awt.*;  import java.awt.event.*;</code></p>
+</li>
+<li>
+<p>Function for conversion
+`public class currencyconverter {
+public static void converter()
+{
+// Creating a new frame using JFrame
+JFrame f = new JFrame(&ldquo;CONVERTER&rdquo;);</p>
+<pre><code> // Creating two labels 
+ JLabel l1, l2; 
+
+ // Creating two text fields. 
+ // One for rupee and one for 
+ // the dollar 
+ JTextField t1, t2; 
+
+ // Creating three buttons 
+ JButton b1, b2, b3; 
+
+ // Naming the labels and setting 
+ // the bounds for the labels 
+ l1 = new JLabel(&quot;Rupees:&quot;); 
+ l1.setBounds(20, 40, 60, 30); 
+ l2 = new JLabel(&quot;Dollars:&quot;); 
+ l2.setBounds(170, 40, 60, 30); 
+
+ // Initializing the text fields with 
+ // 0 by default and setting the 
+ // bounds for the text fields 
+ t1 = new JTextField(&quot;0&quot;); 
+ t1.setBounds(80, 40, 50, 30); 
+ t2 = new JTextField(&quot;0&quot;); 
+ t2.setBounds(240, 40, 50, 30); 
+
+ // Creating a button for INR, 
+ // one button for the dollar 
+ // and one button to close 
+ // and setting the bounds 
+ b1 = new JButton(&quot;INR&quot;); 
+ b1.setBounds(50, 80, 60, 15); 
+ b2 = new JButton(&quot;Dollar&quot;); 
+ b2.setBounds(190, 80, 60, 15); 
+ b3 = new JButton(&quot;close&quot;); 
+ b3.setBounds(150, 150, 60, 30); 
+
+ // Adding action listener 
+ b1.addActionListener(new ActionListener() { 
+ 	public void actionPerformed(ActionEvent e) 
+ 	{ 
+ 		// Converting to double 
+ 		double d 
+ 			= Double.parseDouble(t1.getText()); 
+
+ 		// Converting rupees to dollars 
+ 		double d1 = (d / 65.25); 
+
+ 		// Getting the string value of the 
+ 		// calculated value 
+ 		String str1 = String.valueOf(d1); 
+
+ 		// Placing it in the text box 
+ 		t2.setText(str1); 
+ 	} 
+ }); 
+
+ // Adding action listener 
+ b2.addActionListener(new ActionListener() { 
+ 	public void actionPerformed(ActionEvent e) 
+ 	{ 
+ 		// Converting to double 
+ 		double d2 
+ 			= Double.parseDouble(t2.getText()); 
+
+ 		// converting Dollars to rupees 
+ 		double d3 = (d2 * 65.25); 
+
+ 		// Getting the string value of the 
+ 		// calculated value 
+ 		String str2 = String.valueOf(d3); 
+
+ 		// Placing it in the text box 
+ 		t1.setText(str2); 
+ 	} 
+ }); 
+
+ // Action listener to close the form 
+ b3.addActionListener(new ActionListener() { 
+ 	public void actionPerformed(ActionEvent e) 
+ 	{ 
+ 		f.dispose(); 
+ 	} 
+ }); 
+
+ // Default method for closing the frame 
+ f.addWindowListener(new WindowAdapter() { 
+ 	public void windowClosing(WindowEvent e) 
+ 	{ 
+ 		System.exit(0); 
+ 	} 
+ }); 
+
+ // Adding the created objects 
+ // to the form 
+ f.add(l1); 
+ f.add(t1); 
+ f.add(l2); 
+ f.add(t2); 
+ f.add(b1); 
+ f.add(b2); 
+ f.add(b3); 
+
+ f.setLayout(null); 
+ f.setSize(400, 300); 
+ f.setVisible(true); 
+</code></pre>
+<p>}
+}
+public static void main(String args[])
+{
+converter();
+}`</p>
+</li>
+</ol>
+
+
+        <hr style="visibility: hidden;" />
+        <ul class="pager">
+          
+          <li class="previous">
+            <a href="/posts/introduction-to-java/" data-toggle="tooltip" data-placement="top" title="Introduction to Java">
+              Previous<br>
+              <span>Introduction to Java</span>
+            </a>
+          </li>
+          
+          
+          <li class="next">
+            <a href="/posts/library-management-system/" data-toggle="tooltip" data-placement="top" title=" How to create a Library Management System in Java using OOPs">
+              Next<br>
+              <span> How to create a Library Management System in Java using OOPs</span>
+            </a>
+          </li>
+          
+        </ul>
+        <hr style="visibility: hidden;" />
+
+        
+        
+
+
+
+
+
+
+      </div>
+
+      
+      
+      
+      <div class="
+              col-lg-2 col-lg-offset-0
+              visible-lg-block
+              sidebar-container
+              catalog-container">
+        <div class="side-catalog">
+          <hr class="hidden-sm hidden-xs">
+          <h5>
+            <a class="catalog-toggle" href="#">CATALOG</a>
+          </h5>
+          <ul class="catalog-body"></ul>
+        </div>
+      </div>
+      
+      
+      <div class="
+              col-lg-8 col-lg-offset-2
+              col-md-10 col-md-offset-1
+              sidebar-container">
+
+        
+        
+        <section>
+  
+  
+  <hr class="hidden-sm hidden-xs">
+  
+  <h5>FEATURED TAGS</h5>
+  <div class="tags">
+    
+    <a href="/tags/java/">Java</a>
+    
+    <a href="/tags/oops/">OOPs</a>
+    
+    <a href="/tags/programming/">Programming</a>
+    
+  </div>
+</section>
+
+        
+        
+
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+  
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        
+        <ul class="list-inline text-center">
+
+<li>
+  <a href="https://github.com/ritikahotwani" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://linkedin.com/in/cs03/" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://twitter.com/ritiii24" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li>
+
+<li>
+  <a href="https://www.instagram.com/riti2.4" target="_blank">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-circle fa-stack-2x"></i>
+      <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+    </span>
+  </a>
+</li></ul>
+
+        <p class="copyright text-muted">
+          2024 | Ritika Hotwani  
+          <br>
+          Powered by <a href="https://gohugo.io">Hugo</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src=/js/jquery.min.js></script>
+<script src=/js/bootstrap.min.js crossorigin="anonymous"></script>
+
+
+
+<script src="/js/hux-blog.min.c4ea77041cd3edbfc8b2622cd887a9a5d8760a4162d14489e36d2a3fa4c90172.js"></script>
+
+
+<script src=/js/simple-jekyll-search.min.js></script>
+
+
+<script src="/js/search.min.53bce5da475b4d362500e5ce5dddfa22e20e1b9018777411d2020b4b839c9310.js"></script>
+
+
+
+
+
+
+<script type="text/javascript">
+  function generateCatalog(selector) {
+    _containerSelector = 'div.post-container'
+    
+    var P = $(_containerSelector), a, n, t, l, i, c;
+    a = P.find('h1,h2,h3,h4');
+    
+    $(selector).html('')
+    
+    a.each(function () {
+      n = $(this).prop('tagName').toLowerCase();
+      i = "#" + $(this).prop('id');
+      t = $(this).text();
+      c = $('<a href="' + i + '" rel="nofollow">' + t + '</a>');
+      l = $('<li class="' + n + '_nav"></li>').append(c);
+      $(selector).append(l);
+    });
+    return true;
+  }
+
+  generateCatalog(".catalog-body");
+
+  
+  $(".catalog-toggle").click((function (e) {
+    e.preventDefault();
+    $('.side-catalog').toggleClass("fold")
+  }))
+</script>
+
+
+<script type="text/javascript" src='/js/jquery.nav.min.ade6bde8f9fcc6a4b40852cb892e9f5912340ab8fe1305149d917fdd16fffd8d.js'></script>
+<script>
+   $(document).ready( function () {
+    $('.catalog-body').onePageNav({
+      currentClass: "active",
+      changeHash: !1,
+      easing: "swing",
+      filter: "",
+      scrollSpeed: 700,
+      scrollOffset: 0,
+      scrollThreshold: .2,
+      begin: null,
+      end: null,
+      scrollChange: null,
+      padding: 80
+    });
+  });
+</script>
+
+
+
+
+
+
+
+<script src="/zoomjs/zoom.min.js"></script>
+
+</body>
+
+</html>
