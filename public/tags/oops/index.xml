@@ -2,18 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OOPs on </title>
-    <link>https://blog.ritikahotwani.com/tags/oops/</link>
+    <link>http://localhost:1313/tags/oops/</link>
     <description>Recent content in OOPs on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <copyright>2024 | Ritika Hotwani</copyright>
-    <lastBuildDate>Sat, 30 Mar 2024 20:59:22 +0530</lastBuildDate>
-    <atom:link href="https://blog.ritikahotwani.com/tags/oops/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 05 Apr 2024 21:57:15 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/oops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everything you need to know about Java System.out.println()</title>
+      <link>http://localhost:1313/posts/sout/</link>
+      <pubDate>Fri, 05 Apr 2024 21:57:15 +0530</pubDate>
+      <guid>http://localhost:1313/posts/sout/</guid>
+      <description>IntroductionThe statement System.out.println() is a fundamental piece of code in Java programming, often used for outputting ( printing ) information to the console.&#xA;Let&amp;rsquo;s delve deeper into its meaning and functionality..&#xA;SyntaxSystem.out.println(argument);&#xA;The argument could be anything: a number ( integer, float, double ), a word, or a sentence.&#xA;Diving deeper into the meaningSystem :This is a predefined final class in Java&amp;rsquo;s core library (java.lang package) that provides access to system-related properties and methods.</description>
+    </item>
     <item>
       <title> How to create a Library Management System in Java using OOPs</title>
-      <link>https://blog.ritikahotwani.com/posts/library-management-system/</link>
+      <link>http://localhost:1313/posts/library-management-system/</link>
       <pubDate>Sat, 30 Mar 2024 20:59:22 +0530</pubDate>
-      <guid>https://blog.ritikahotwani.com/posts/library-management-system/</guid>
+      <guid>http://localhost:1313/posts/library-management-system/</guid>
       <description>IntroductionThis blog showcases a simplistic approach to library management system implementation using Object Oriented Programming (OOP). We will be creating a library management system with the following features :&#xA;Add a new book Borrow a book Return a book Display all the books Display available books The source code of the project : github&#xA;Link of implementation : youtube&#xA;Prerequisites Java JDK installed. link to install VScode ( or any other IDE of your choice).</description>
     </item>
   </channel>

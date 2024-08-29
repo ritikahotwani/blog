@@ -67,6 +67,11 @@ weight = 50
 # url = "https://github.com/roninro/hugo-theme-puppet/"
 # weight = 100
 
+# [params.gitalk]
+# owner = "ritikahotwani"
+# repo = "ritikahotwani-blog-comments"
+# clientId = "B7ecbff3d7132216f424"
+# clientSecret = "070d710906755e3e4bf6d6a56a5553196731aa32"
 
 [params]
 author = "Ritika Howani"
@@ -104,7 +109,7 @@ instagram = "riti2.4"
 # zhihu = "johndoe"
 # weibo = "johndoe"
 github = "ritikahotwani"
-linkedin = "cs03/"
+linkedin = "ritika-hotwani-46a651201/"
 mail = "ritikahotwani24@gmail.com"
 
 # [[params.friends]]
@@ -116,8 +121,9 @@ mail = "ritikahotwani24@gmail.com"
 # url = "https://gohugo.io"
 
 # See https://giscus.app/
+
 [params.giscus]
-enable = false
+enable = true
 repo = "Chaitanya-Shahare/blog-site-comments"
 repo_id = "R_kgDOIa6SGg"
 # category = "General"
